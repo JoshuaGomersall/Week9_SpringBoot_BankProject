@@ -9,15 +9,26 @@ import org.springframework.context.ApplicationContext;
 
 public class AccountGeneratorTests {
 	
+	ApplicationContext ac;
+	AccountNumberGenerator gen; 
+	AccountsHashmap ah ;
 	@Before
 	public void setUp() {
-		ApplicationContext ac = SpringApplication.run(SpringBootAccountsApplication.class, args);
-		AccountNumberGenerator gen = (AccountNumberGenerator) ac.getBean("accountNumberGenerator");
+		ac = SpringApplication.run(SpringBootAccountsApplication.class);
+		gen = (AccountNumberGenerator) ac.getBean("accountNumberGenerator");
+		ah = (AccountsHashmap) ac.getBean("accountsHashmap");
 	}
 	
-	@Test
-	public void a() {
-		assertEquals(7,numGen(6));
+
+	
+	public void accountAddTest() {
+		ah.accounts.put("a6789623","Josh Gom");
+		assertEquals(true,ah.accounts.containsKey("a6789623"));		
 	}
+	
+//	@Test
+//	public void a() {
+//		assertEquals(7,numGen(6));
+//	}
 
 }

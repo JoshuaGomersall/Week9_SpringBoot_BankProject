@@ -5,14 +5,26 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-@Configuration
 public class AccountNumberGenerator {
 	
-	@Scope("prototype")
-	public String numGen(int length) {
+	public String numGen6() {
 		String str = "abc";
 		char letterPart = str.charAt(ThreadLocalRandom.current().nextInt(0, 3));
-		int numberPart = (int) ThreadLocalRandom.current().nextDouble(Math.pow(10, length-1), Math.pow(10, length));
+		int numberPart = (int) ThreadLocalRandom.current().nextDouble(Math.pow(10, 5), Math.pow(10, 6));
+		return letterPart +""+ numberPart;
+	}
+	
+	public String numGen8() {
+		String str = "abc";
+		char letterPart = str.charAt(ThreadLocalRandom.current().nextInt(0, 3));
+		int numberPart = (int) ThreadLocalRandom.current().nextDouble(Math.pow(10, 7), Math.pow(10, 8));
+		return letterPart +""+ numberPart;
+	}
+	
+	public String numGen10() {
+		String str = "abc";
+		char letterPart = str.charAt(ThreadLocalRandom.current().nextInt(0, 3));
+		int numberPart = (int) ThreadLocalRandom.current().nextDouble(Math.pow(10, 9), Math.pow(10, 10));
 		return letterPart +""+ numberPart;
 	}
 
