@@ -2,13 +2,8 @@
 
 
 # Features
-CRUD functionality on a user table
+Random Account Number Generator 
 
-
-Random account number generator 
-
-
-Priza draw based on number generator  
 
 
 
