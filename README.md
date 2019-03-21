@@ -2,13 +2,13 @@
 
 
 # Features
-Random Account Number Generator 
+CRUD functionality on a user table
 
 
-# Port Numbers
-8081 - Account API 
+Random account number generator 
 
-8882 - Account Number Gen API 
 
-8883 - Account Prize API
+Priza draw based on number generator  
+
+
 
